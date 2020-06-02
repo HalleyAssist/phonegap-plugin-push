@@ -337,7 +337,7 @@ declare namespace PhonegapPluginPush {
 		init(options: InitOptions): PushNotification;
 		new(options: InitOptions): PushNotification;
 
-		hasPermission: (successCallback, errorCallback) => void;
+		hasPermission: (successCallback: (data: { isEnabled: boolean }) => void, errorCallback: (error: any) => void) => void;
 		//	Android O Only
 		createChannel: (successCallback: () => void, errorCallback: () => void, channel: Channel) => void;
 		deleteChannel: (successCallback: () => void, errorCallback: () => void, channelId: string) => void;
